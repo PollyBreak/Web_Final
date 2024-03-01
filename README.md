@@ -4,6 +4,7 @@ Implemented:
 - Authentication and Authorization with JWT tokens, different permissions for users and admins.
 - REST API for projects using MongoDB
 - 3 using of third-party APIs (nager.date, restcountries, Financial Modeling Prep) with Charts in Front-side.
+- sending emails when new users register and when someone logs in
 
 Besides, I have created convenience site using EJS, CSS, JS, that allows to check the work ability of my server application. 
 To open it write 'http://localhost:3000/home' 
