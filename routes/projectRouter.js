@@ -6,15 +6,15 @@ const authMiddleware = require('../middleware/authMiddleware')
 const roleMiddleware = require('../middleware/roleMiddleware')
 
 
-router.post('', controller.createProject)
+router.post('',roleMiddleware(["ADMIN"]), controller.createProject)
 
 router.get('', controller.getProjects)
 
 router.get('/:id', controller.getProjectById)
 
-router.put('/:id', controller.updateProjectById)
+router.put('/:id',roleMiddleware(["ADMIN"]), controller.updateProjectById)
 
-router.delete('/:id', controller.deleteProjectById)
+router.delete('/:id',roleMiddleware(["ADMIN"]), controller.deleteProjectById)
 
 
 module.exports = router
